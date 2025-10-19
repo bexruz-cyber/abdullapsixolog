@@ -107,12 +107,12 @@
   // ========= LocalStorage ga saqlash (Sheets o'rniga) =========
   function saveToLocal({name, phone}){
     const payload = {
-      "Ism": name,
-      "Telefon raqam": phone,
-      "Royhatdan o'tgan vaqti": new Date().toLocaleString("uz-UZ", { timeZone: "Asia/Tashkent" })
+      Ism: name,
+      TelefonRaqam: phone,
+      SanaSoat: new Date().toLocaleString("uz-UZ", { timeZone: "Asia/Tashkent" })
     };
     try {
-      localStorage.setItem("registrationData", JSON.stringify(payload));
+      localStorage.setItem("formData", JSON.stringify(payload));
       return true;
     } catch (e) {
       console.error("LocalStorage xatosi:", e);
