@@ -6,22 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdulla Saidkamolov</title>
     <style>
-       * {margin: 0;padding: 0;box-sizing: border-box;}.date {padding-top: 40px;padding-bottom: 40px;background-color: #F8F5EE;}.date__container {max-width: 390px;margin-left: auto;margin-right: auto;padding-left: 10px;padding-right: 10px;}.date__top {background-color: #E73A04;padding: 4px 6px;border-radius: 5px;width: 100%;margin-left: auto;margin-right: auto;max-width: 194px;margin-bottom: 19px;text-align: center;}.date__top-span {color: white;font-weight: 400;font-size: 20px;line-height: 30px;}.date__title {font-family: "Prata", Sans-serif;font-weight: 400;font-size: 31px;line-height: 37.2px;text-align: center;text-transform: capitalize;margin-bottom: 19px;}.date__text {font-weight: 400;font-size: 18px;line-height: 25.2px;text-align: center;margin-bottom: 14px;span {color: #FF0000;}}.date__arrow {margin-left: auto;margin-right: auto;display: flex;align-items: center;justify-content: center;margin-bottom: 17px;}.date__register-btn {background-color: #E73A04;padding: 12px 24px;border-radius: 5px;width: 100%;margin-left: auto;margin-right: auto;max-width: 303px;display: flex;align-items: center;justify-content: center;margin-bottom: 10px;gap: 5px;text-align: center;color: white;font-weight: 400;font-size: 23px;line-height: 25px;}.date__subtext {font-weight: 400;font-size: 18px;line-height: 27px;text-align: center;margin-bottom: 49px;}.date__row {background: var(--color-white-solid, #FFFFFF);box-shadow: 0px 0px 3px 3px #0000001C;border-radius: 7px;padding: 20px;display: flex;flex-direction: column;gap: 31px;}.date__col-text {font-weight: 700;font-style: Bold;margin-bottom: 21px;font-size: 18px;line-height: 21px;letter-spacing: 0%;vertical-align: middle;font-family: "Prata", Sans-serif;}.date__col-inp {background: var(--color-white-solid, #FFFFFF);border: 1px solid #00000040;outline: none;width: 100%;height: 48px;padding: 13.5px 14px;border-radius: 3px;}.error-msg {color: #e73a04;font-size: 14px;margin-top: 4px;display: none;font-family: "Prata", sans-serif;}.date__col-inp.error {border: 1px solid #e73a04;background-color: #fff5f2;}.date__row-text {font-weight: 400;font-size: 18px;line-height: 25.2px;letter-spacing: 0%;text-align: center;vertical-align: middle;}.date__timer-box {display: flex;align-items: center;justify-content: center;margin-bottom: 19px;}.date__btn {font-family: 500;font-size: 20px;line-height: 20px;cursor: pointer;color: white;padding: 14px 18px;background-color: #E73A04;border-radius: 3px;text-align: center;font-family: "Prata", Sans-serif;}.block {width: 80px;text-align: center;}.value {font-weight: 400;font-size: 30px;line-height: 30px;}.label {font-weight: 400;font-size: 20px;line-height: 20px;text-align: center;}.registerModal {max-width: 500px;width: 100%;}.timer {display: flex;gap: var(--gap-between-blocks);align-items: flex-start;}@media (max-width:400px) {.date__btn {font-size: 18px;}.date__title {font-size: 29px;line-height: 29px;}.date__text {font-size: 16px;line-height: 22px;}.date__row {padding: 15px;}}.date__rows { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; z-index: 1000; width: calc(100% - 20px); max-width: 400px; border-radius: 7px; padding: 20px; gap: 31px; box-sizing: border-box; } .homeModalOverlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.6); z-index: 999; } .homeModal { padding-left: 10px; padding-right: 10px; } .mb { margin-bottom: 20px; }button{cursor: pointer;border: none;}
+       * {margin: 0;padding: 0;box-sizing: border-box;}.date {padding-top: 40px;padding-bottom: 40px;background-color: #F8F5EE;}.date__container {max-width: 390px;margin-left: auto;margin-right: auto;padding-left: 10px;padding-right: 10px;}.date__top {background-color: #E73A04;padding: 4px 6px;border-radius: 5px;width: 100%;margin-left: auto;margin-right: auto;max-width: 194px;margin-bottom: 19px;text-align: center;}.date__top-span {color: white;font-weight: 400;font-size: 20px;line-height: 30px;}.date__title {font-family: "Prata", Sans-serif;font-weight: 400;font-size: 31px;line-height: 37.2px;text-align: center;text-transform: capitalize;margin-bottom: 19px;}.date__text {font-weight: 400;font-size: 18px;line-height: 25.2px;text-align: center;margin-bottom: 14px;span {color: #FF0000;}}.date__arrow {margin-left: auto;margin-right: auto;display: flex;align-items: center;justify-content: center;margin-bottom: 17px;}.date__register-btn {background-color: #E73A04;padding: 12px 24px;border-radius: 5px;width: 100%;margin-left: auto;margin-right: auto;max-width: 303px;display: flex;align-items: center;justify-content: center;margin-bottom: 10px;gap: 5px;text-align: center;color: white;font-weight: 400;font-size: 23px;line-height: 25px;}.date__subtext {font-weight: 400;font-size: 18px;line-height: 27px;text-align: center;margin-bottom: 49px;}.date__row {background: var(--color-white-solid, #FFFFFF);box-shadow: 0px 0px 3px 3px #0000001C;border-radius: 7px;padding: 20px;display: flex;flex-direction: column;gap: 31px;}.date__col-text {font-weight: 700;font-style: Bold;margin-bottom: 21px;font-size: 18px;line-height: 21px;letter-spacing: 0%;vertical-align: middle;font-family: "Prata", Sans-serif;}.date__col-inp {background: var(--color-white-solid, #FFFFFF);border: 1px solid #00000040;outline: none;width: 100%;height: 48px;padding: 13.5px 14px;border-radius: 3px;}.error-msg {color: #e73a04;font-size: 14px;margin-top: 4px;display: none;font-family: "Prata", sans-serif;}.date__col-inp.error {border: 1px solid #e73a04;background-color: #fff5f2;}.date__row-text {font-weight: 400;font-size: 18px;line-height: 25.2px;letter-spacing: 0%;text-align: center;vertical-align: middle;}.date__timer-box {display: flex;align-items: center;justify-content: center;margin-bottom: 19px;}.date__btn {font-family: 500;font-size: 20px;line-height: 20px;cursor: pointer;color: white;padding: 14px 18px;background-color: #E73A04;border-radius: 3px;text-align: center;font-family: "Prata", Sans-serif;}.block {width: 80px;text-align: center;}.value {font-weight: 400;font-size: 30px;line-height: 30px;}.label {font-weight: 400;font-size: 20px;line-height: 20px;text-align: center;}.registerModal {max-width: 500px;width: 100%;}.timer {display: flex;gap: var(--gap-between-blocks);align-items: flex-start;}@media (max-width:400px) {.date__btn {font-size: 18px;}.date__title {font-size: 29px;line-height: 29px;}.date__text {font-size: 16px;line-height: 22px;}.date__row {padding: 15px;}}.date__rows { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; z-index: 1000; width: calc(100% - 20px); max-width: 400px; border-radius: 7px; padding: 20px; gap: 31px; box-sizing: border-box; } .homeModalOverlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.6); z-index: 999; } .homeModal { padding-left: 10px; padding-right: 10px; } .mb { margin-bottom: 20px; }button{cursor: pointer;border: none;}.homeModalClose{margin-left: auto;display: block; width: 20px; height: 20px;}
     </style>
 </head>
 
 <body>
 
-    <!-- Asosiy bo'lim -->
-  <!-- Asosiy bo'lim -->
-  <section class="date">
+   <!-- Main section -->
+  <section class="date" aria-labelledby="pageTitle">
     <div class="date__container">
-      <div class="date__top">
+      <div class="date__top" aria-hidden="true">
         <span class="date__top-span">BEPUL WEBINAR</span>
+
       </div>
 
-      <h1 class="date__title">
-        500.000+ ayollar kabi Siz ham badavlat ayol bo'lishning 5 sirlarini
+      <h1 id="pageTitle" class="date__title">
+       500.000+ ayollar kabi Siz ham badavlat ayol bo'lishning 5 sirlarini
         o'rganing va stress bilan butunlay xayrlashing!
       </h1>
 
@@ -31,41 +31,41 @@
       </p>
 
       <div class="date__register-btn" id="openModalBtn" role="button" tabindex="0" aria-controls="registrationModal" aria-expanded="false">
-        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M15.7932 10.6923H2.22949C1.93179 10.6923 1.69043 10.9336 1.69043 11.2313V13.747C1.69043 14.0447 1.93179 14.286 2.22949 14.286H15.7932V16.3551C15.7932 17.3156 16.9545 17.7966 17.6337 17.1175L21.4997 13.2515C21.9207 12.8305 21.9207 12.1478 21.4997 11.7268L17.6337 7.8609C16.9546 7.18173 15.7932 7.66275 15.7932 8.62327V10.6923Z" fill="white"/>
         </svg>
         <span>BEPUL O'RGANISH</span>
       </div>
 
-      <p class="date__subtext">★★★★★ 500.000+ ishtirokchilar</p>
+      <p class="date__subtext">★★★★★ 12,000+ ishtirokchilar</p>
 
-      <!-- Asosiy forma -->
+      <!-- Main form -->
       <form id="mainForm" novalidate>
-        <div class="date__row">
+        <div class="date__row" role="group" aria-label="Ro'yxat">
           <div class="date__col">
             <label for="nameMain">
               <p class="date__col-text">Ismingiz</p>
               <input class="date__col-inp" type="text" id="nameMain" autocomplete="name" required />
-              <small class="error-msg" id="errNameMain"></small>
+              <small class="error-msg" id="errNameMain" aria-live="polite"></small>
             </label>
           </div>
 
           <div class="date__col">
             <label for="telMain">
               <p class="date__col-text">Telefon raqamingiz</p>
-              <input class="date__col-inp tel" type="tel" id="telMain" value="+998" placeholder="998XXXXXXXXX" inputmode="tel" autocomplete="tel" required />
-              <small class="error-msg" id="errTelMain"></small>
+              <input class="date__col-inp tel" type="tel" id="telMain" value="+998-" placeholder="+998-XX-XXX-XX-XX" inputmode="tel" autocomplete="tel" required />
+              <small class="error-msg" id="errTelMain" aria-live="polite"></small>
             </label>
           </div>
 
-          <button type="submit" class="date__btn registerBtn" id="submitMain">
-            -> BEPUL RO'YXATDAN O'TISH
+          <button type="submit" class="date__btn registerBtn" id="submitMain" aria-label="Bepul ro'yxatdan o'tish">
+            → BEPUL RO'YXATDAN O'TISH
           </button>
 
           <h3 class="date__row-text">Bepul Ro'yxatdan O'tishga Ulguring!</h3>
 
           <!-- Timer -->
-          <div class="date__timer-box">
+          <div class="date__timer-box" aria-hidden="false">
             <div class="timer" role="timer" aria-live="polite" aria-atomic="true">
               <div class="block">
                 <div class="value" id="days">00</div>
@@ -92,35 +92,36 @@
   </section>
 
   <!-- Modal -->
-  <div id="registrationModal" class="homeModal" style="display:none;">
-    <div class="homeModalOverlay" id="modalOverlay" aria-hidden="true"></div>
+  <div id="registrationModal" class="homeModal" aria-hidden="true" style="display: none;">
+    <div class="homeModalOverlay" id="modalOverlay" tabindex="-1" aria-hidden="true"></div>
 
-    <div class="homeModalCard" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <button class="homeModalClose" id="closeModalBtn" aria-label="Yopish">✕</button>
-      <h2 id="modalTitle" style="margin-top:0;">Tezkor ro‘yxat</h2>
+    <div class="homeModalCard" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc">
+      <div class="date__rows" role="document">
+        <button class="homeModalClose" id="closeModalBtn" aria-label="Yopish">✕</button>
+        <h2 id="modalTitle" style="margin-top:10px; margin-bottom:6px;">Tezkor ro‘yxat</h2>
+        <p id="modalDesc" style="margin-bottom:8px; color:#555; font-size:14px;">Formani to'ldiring — bo'sh joylar tezda tugaydi.</p>
 
-      <!-- Modal form -->
-      <form id="modalForm" novalidate>
-        <div class="date__rows">
+        <!-- Modal form -->
+        <form id="modalForm" novalidate>
           <div class="date__col mb">
             <label for="nameModal">
               <p class="date__col-text">Ismingiz</p>
               <input class="date__col-inp" type="text" id="nameModal" autocomplete="name" required />
-              <small class="error-msg" id="errNameModal"></small>
+              <small class="error-msg" id="errNameModal" aria-live="polite"></small>
             </label>
           </div>
 
           <div class="date__col mb">
             <label for="telModal">
               <p class="date__col-text">Telefon raqamingiz</p>
-              <input class="date__col-inp tel" type="tel" id="telModal" value="+998" placeholder="998XXXXXXXXX" inputmode="tel" autocomplete="tel" required />
-              <small class="error-msg" id="errTelModal"></small>
+              <input class="date__col-inp tel" type="tel" id="telModal" value="+998-" placeholder="+998-XX-XXX-XX-XX" inputmode="tel" autocomplete="tel" required />
+              <small class="error-msg" id="errTelModal" aria-live="polite"></small>
             </label>
           </div>
 
-          <button type="submit" class="date__btn" id="submitModal">→ BEPUL RO‘YXATDAN O‘TISH</button>
-        </div>
-      </form>
+          <button type="submit" class="date__btn" id="submitModal" aria-label="Modal: bepul ro'yxatdan o'tish">→ BEPUL RO‘YXATDAN O‘TISH</button>
+        </form>
+      </div>
     </div>
   </div>
 
