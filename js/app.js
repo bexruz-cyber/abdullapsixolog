@@ -34,39 +34,71 @@
       }
     }, 250);
 
-    // ========= Modal open/close =========
-    const modal = document.getElementById("registrationModal");
-    const openModalBtn = document.getElementById("openModalBtn");
-    const closeModalBtn = document.getElementById("closeModalBtn");
-    const modalOverlay = document.getElementById("modalOverlay");
+   const modal = document.getElementById("registrationModal");
+const openModalBtns = document.querySelectorAll(".openBtn"); // multiple buttons
+const closeModalBtn = document.getElementById("closeModalBtn");
+const modalOverlay = document.getElementById("modalOverlay");
 
-    function openModal(){
-      if (!modal) return;
-      modal.style.display = "block";
-      modal.setAttribute("aria-hidden","false");
-      document.body.style.overflowY = "hidden";
-      if (openModalBtn) openModalBtn.setAttribute("aria-expanded", "true");
+// openModal optionally accepts the button that opened it so we can return focus
+function openModal(openerBtn = null) {
+  if (!modal) return;
+  modal.style.display = "block";
+  modal.setAttribute("aria-hidden", "false");
+  document.body.style.overflowY = "hidden";
 
-      const first = modal.querySelector("input");
-      if (first && typeof first.focus === "function") {
-        setTimeout(() => first.focus(), 50);
-      }
+  // mark which button opened the modal so we can restore focus on close
+  modal._lastOpener = openerBtn;
+
+  if (openerBtn) openerBtn.setAttribute("aria-expanded", "true");
+
+  // find the first focusable element inside the modal
+  const first = modal.querySelector(
+    "input, button, textarea, select, [tabindex]:not([tabindex='-1'])"
+  );
+  if (first && typeof first.focus === "function") {
+    setTimeout(() => first.focus(), 50);
+  }
+}
+
+function closeModal() {
+  if (!modal) return;
+  modal.style.display = "none";
+  modal.setAttribute("aria-hidden", "true");
+  document.body.style.overflowY = "auto";
+
+  // reset aria-expanded on all open buttons (defensive)
+  openModalBtns.forEach((btn) => btn.setAttribute("aria-expanded", "false"));
+
+  // restore focus to the opener if available
+  const opener = modal._lastOpener;
+  if (opener && typeof opener.focus === "function") {
+    opener.focus();
+    modal._lastOpener = null;
+  }
+}
+
+// Attach handlers to all open buttons
+openModalBtns.forEach((btn) => {
+  // make sure button is keyboard accessible (if it's not <button>, ensure role & tabindex in HTML)
+  btn.addEventListener("click", () => openModal(btn));
+  btn.addEventListener("keydown", (e) => {
+    // handle Enter and Space
+    if (e.key === "Enter" || e.key === " " || e.key === "Spacebar") {
+      e.preventDefault();
+      openModal(btn);
     }
-    function closeModal(){
-      if (!modal) return;
-      modal.style.display = "none";
-      modal.setAttribute("aria-hidden","true");
-      document.body.style.overflowY = "auto";
-      if (openModalBtn) openModalBtn.setAttribute("aria-expanded", "false");
-      if (openModalBtn && typeof openModalBtn.focus === "function") openModalBtn.focus();
-    }
-    if (openModalBtn) {
-      openModalBtn.addEventListener("click", openModal);
-      openModalBtn.addEventListener("keydown", (e)=>{ if(e.key === "Enter" || e.key === " "){ e.preventDefault(); openModal(); }});
-    }
-    if (closeModalBtn) closeModalBtn.addEventListener("click", closeModal);
-    if (modalOverlay) modalOverlay.addEventListener("click", closeModal);
-    document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
+  });
+});
+
+// close handlers
+if (closeModalBtn) closeModalBtn.addEventListener("click", closeModal);
+if (modalOverlay) modalOverlay.addEventListener("click", closeModal);
+
+// global Escape handler
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeModal();
+});
+
 
     // ========= Phone formatting helpers =========
     // Accepts any input; returns formatted "+998-XX-XXX-XX-XX"
