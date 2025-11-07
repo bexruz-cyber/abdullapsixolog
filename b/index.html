@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psixolog</title>
+    <style>
+* { margin: 0; padding: 0; box-sizing: border-box; } body { background-color: #fafafa; } .container { max-width: 430px; width: 100%; margin-left: auto; position: relative; margin-right: auto; padding-left: 20px; padding-right: 20px; font-family: sans-serif; padding-bottom: 35px; } .header { width: 100%; display: flex; align-items: center; justify-content: space-between; background: var(--color-white-02, #ffffff01); box-shadow: 0px 9px 18px 0px #00000014; padding: 12px; border-radius: 0px 0 16px 16px; margin-bottom: 24px; } .header__col:first-child { display: flex; align-items: center; gap: 10px; } .header__col__title { font-size: clamp(10px, 3.4vw, 14px); font-weight: 700; line-height: 15px; } .header__col__text { color: #00000080; font-size: clamp(10px, 3.4vw, 14px); font-weight: 400; } .description { font-size: clamp(10px, 3vw, 14px); font-weight: 400; line-height: 130%; text-align: center; margin-bottom: 11px; } .description span, .info__text span { color: #fb2c36; } .title { font-weight: 700; font-size: clamp(18px, 5.5vw, 24px); text-align: center; max-width: 380px; } .header__line { background-color: #0000001A; height: 36px; width: 1px; } .title span { color: #0866ff; } .center { padding-top: 24px; position: relative; display: flex; align-items: center; justify-content: center; width: 100%; } .speaker_img { max-width: 353px; width: 100%; height: 324px; } .center__arrow { position: absolute; left: 12px; top: 8px; } .button { padding: 19px; width: 100%; border: none; background-color: #0866ff; box-shadow: 0px 1px 2px -1px #0000001a; box-shadow: 0px 1px 3px 0px #0000001a; border-radius: 33554400px; font-size: 24px; color: white; font-weight: 700; margin-bottom: 12px; } .info__box { padding: 13px; border: 1px solid #e5e7eb; border-radius: 16px; display: flex; align-items: start; gap: 8px; position: relative; } .info__box svg { flex-shrink: 0; } .info__text { font-size: 14px; font-weight: 500; } .info__right_arrow { position: absolute; right: 0; top: -31px; } @media (max-width:340px) { .speaker_img { max-width: 290px; width: 100%; height: 270px; } }
+    </style>
+    <link rel="stylesheet" href="./css/modal.css" media="print" onload="this.media='all'" />
+    <noscript>
+        <link rel="stylesheet" href="./css/modal.css" />
+    </noscript>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header__col">
+                <svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M5.30466 0C5.85931 0 6.30896 0.443275 6.30896 0.990072V3.19151C10.0954 2.85907 13.9046 2.85907 17.691 3.19151V0.990072C17.691 0.443275 18.1407 0 18.6954 0C19.25 0 19.6997 0.443275 19.6997 0.990072V3.38794C21.6988 3.66662 23.2784 5.22557 23.5457 7.21412L23.6616 8.07607C24.1491 11.7015 24.107 15.377 23.5366 18.9908C23.2541 20.7808 21.779 22.1558 19.9501 22.3335L18.3525 22.4889C14.1277 22.8996 9.87222 22.8996 5.64737 22.4889L4.04985 22.3335C2.22102 22.1558 0.745826 20.7808 0.463269 18.9908C-0.107121 15.377 -0.149221 11.7015 0.338253 8.07607L0.45415 7.21412C0.721535 5.22553 2.30104 3.66658 4.30036 3.38793V0.990072C4.30036 0.443275 4.75 0 5.30466 0ZM5.90075 5.21808C9.95712 4.82374 14.0429 4.82374 18.0992 5.21808L19.3116 5.33596C20.4722 5.44878 21.4014 6.33453 21.5545 7.4743L21.6705 8.33626C21.711 8.63739 21.7477 8.93889 21.7804 9.24068H2.21952C2.25231 8.93889 2.28894 8.6374 2.32944 8.33628L2.44533 7.4743C2.59859 6.33453 3.52766 5.44878 4.68829 5.33596L5.90075 5.21808ZM2.05987 11.2208C1.92839 13.7133 2.05793 16.215 2.44798 18.6863C2.58971 19.5841 3.32966 20.2738 4.24697 20.363L5.84449 20.5183C9.93824 20.9163 14.0618 20.9163 18.1555 20.5183L19.7529 20.363C20.6702 20.2738 21.4102 19.5841 21.552 18.6863C21.942 16.215 22.0715 13.7133 21.94 11.2208H2.05987Z"
+                        fill="#0866FF" />
+                </svg>
+                <div class="header__col__text_box">
+                    <p class="header__col__title">12-13-14-Noyabr</p>
+                    <p class="header__col__text">20:30</p>
+                </div>
+            </div>
+            <div class="header__line"></div>
+            <div class="header__col">
+                <p class="header__col__title">ABDULLA ABDULLYEV</p>
+                <p class="header__col__text">9 yillik tajriba</p>
+            </div>
+        </div>
+
+        <p class="description">
+            Asl narxi <span>999 ming so'm</span> bo'lgan 3 kunlik darslarimda <br>
+            <span>MUTLAQO BEPUL</span> qatnashing!
+        </p>
+        <h1 class="title">
+            3 kunda sizni erkak unutomaydigan ayolga aylantiraman va pullarga boylikga ochilishni o‘rgataman
+        </h1>
+        <div class="center">
+            <img src="./images/arrowred.svg" alt="arrow" loading="lazy" decoding="async" class="center__arrow">
+            <img src="./images/speaker.avif" width="353" height="324" alt="speaker" loading="lazy" decoding="async"
+                class="speaker_img">
+        </div>
+        <!-- <div class="gradient"></div> -->
+        <button class="button registerBtn">RO'YXATDAN O'TISH</button>
+        <div class="info__box">
+            <svg class="info__right_arrow" width="20" height="47" viewBox="0 0 20 47" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M0.928875 4.12864C0.497878 4.34042 0.320166 4.86149 0.53194 5.29248L3.98302 12.3159C4.19479 12.7469 4.71586 12.9247 5.14684 12.7129C5.57784 12.501 5.75556 11.98 5.54378 11.549L2.47616 5.30596L8.7192 2.23834C9.15021 2.02656 9.32794 1.5055 9.11613 1.0745C8.90441 0.643507 8.38331 0.465796 7.95232 0.67757L0.928875 4.12864ZM2.84859 45.4957L3.38209 46.1822C12.4044 39.1716 16.9475 33.0168 18.5577 27.6583C20.1848 22.2437 18.7826 17.7622 16.2198 14.2491C13.6811 10.769 10.0049 8.23175 7.01238 6.57471C5.50878 5.74212 4.16073 5.12248 3.18691 4.71029C2.69966 4.50405 2.30518 4.34938 2.03066 4.24561C1.89336 4.19372 1.78599 4.15453 1.71194 4.12797C1.67491 4.11469 1.64621 4.10457 1.62624 4.09758C1.61626 4.0941 1.60846 4.09139 1.6029 4.08947C1.60012 4.08852 1.5979 4.08775 1.59625 4.08719C1.59543 4.0869 1.59461 4.08662 1.59419 4.08648C1.59352 4.08625 1.59299 4.08607 1.31233 4.90903C1.03165 5.73199 1.03141 5.7319 1.0313 5.73187C1.03099 5.73176 1.03146 5.73192 1.0313 5.73187C1.03191 5.73208 1.0336 5.73265 1.03533 5.73325C1.03878 5.73444 1.04446 5.73641 1.0523 5.73915C1.06799 5.74464 1.09233 5.75321 1.12491 5.7649C1.19007 5.78827 1.28816 5.82404 1.41581 5.87229C1.67117 5.9688 2.04452 6.11512 2.50907 6.31175C3.43883 6.70528 4.73021 7.29881 6.16997 8.09605C9.06413 9.69865 12.4905 12.0877 14.8148 15.274C17.115 18.4271 18.3363 22.3522 16.8923 27.1579C15.4313 32.0196 11.2085 37.8987 2.31508 44.8091L2.84859 45.4957Z"
+                    fill="#FF0000" />
+            </svg>
+
+
+            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M10 15.02C10.2833 15.02 10.5208 14.9242 10.7125 14.7325C10.9042 14.5408 11 14.3033 11 14.02V10.02C11 9.73669 10.9042 9.49919 10.7125 9.30752C10.5208 9.11585 10.2833 9.02002 10 9.02002C9.71667 9.02002 9.47917 9.11585 9.2875 9.30752C9.09583 9.49919 9 9.73669 9 10.02V14.02C9 14.3033 9.09583 14.5408 9.2875 14.7325C9.47917 14.9242 9.71667 15.02 10 15.02ZM10 7.02002C10.2833 7.02002 10.5208 6.92419 10.7125 6.73252C10.9042 6.54085 11 6.30335 11 6.02002C11 5.73669 10.9042 5.49919 10.7125 5.30752C10.5208 5.11585 10.2833 5.02002 10 5.02002C9.71667 5.02002 9.47917 5.11585 9.2875 5.30752C9.09583 5.49919 9 5.73669 9 6.02002C9 6.30335 9.09583 6.54085 9.2875 6.73252C9.47917 6.92419 9.71667 7.02002 10 7.02002ZM10 20.02C8.61667 20.02 7.31667 19.7575 6.1 19.2325C4.88333 18.7075 3.825 17.995 2.925 17.095C2.025 16.195 1.3125 15.1367 0.7875 13.92C0.2625 12.7033 0 11.4033 0 10.02C0 8.63669 0.2625 7.33669 0.7875 6.12002C1.3125 4.90335 2.025 3.84502 2.925 2.94502C3.825 2.04502 4.88333 1.33252 6.1 0.80752C7.31667 0.28252 8.61667 0.0200195 10 0.0200195C11.3833 0.0200195 12.6833 0.28252 13.9 0.80752C15.1167 1.33252 16.175 2.04502 17.075 2.94502C17.975 3.84502 18.6875 4.90335 19.2125 6.12002C19.7375 7.33669 20 8.63669 20 10.02C20 11.4033 19.7375 12.7033 19.2125 13.92C18.6875 15.1367 17.975 16.195 17.075 17.095C16.175 17.995 15.1167 18.7075 13.9 19.2325C12.6833 19.7575 11.3833 20.02 10 20.02Z"
+                    fill="#F89B25" />
+            </svg>
+            <p class="info__text">
+                <span>Diqqat!</span> Darslarga bepul qo'shilish uchun hoziroq
+                ro'yxatdan o'tib, yopiq telegram kanalga
+                qo'shilishingiz kerak!
+            </p>
+        </div>
+    </div>
+
+    <div id="registrationModal" class="homeModal" style="display: none">
+        <div class="homeModalOverlay"></div>
+        <div class="homeFormContainer">
+            <button class="closeButton" id="closeModalBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 12 12" fill="none">
+                    <path d="M1 11L11 1M1 1.00001L11 11" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" />
+                </svg>
+            </button>
+            <div class="homeFormTop">
+                <h1 class="homeFormTopTitle">
+                    Bepul darsga <br> ro'yxatdan o'tish
+                </h1>
+            </div>
+            <form id="registrationForm" name="contact-form">
+
+                <div class="HomeFormRow">
+                    <label class="HomeFormRowLabel" for="phone">Telefon raqamingiz:</label>
+                    <div class="phone-input-container">
+                        <div class="country-selector">
+                            <div class="selected-country" id="selectedCountry">
+                                <span id="selectedCountryCode">+998</span>
+                                <svg id="dropdownIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                            <div class="country-dropdown" id="countryDropdown" style="display: none"></div>
+                        </div>
+                        <input class="HomeFormRowInput" type="tel" id="phone" name="phone" placeholder="88 888 88 88"
+                            autocomplete="tel" />
+                    </div>
+                    <p class="homeFormErrorText" id="phoneError" style="display: none">
+                        ❌ Telefon raqam mos emas!
+                    </p>
+                </div>
+                <button type="submit" class="HomeFormBtn" id="submitBtn">ro'yxatdan o'tish </button>
+            </form>
+        </div>
+    </div>
+
+    <script defer src="./js/app.js"></script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1091195675362491');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1288193548953928&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+</body>
+
+</html>
