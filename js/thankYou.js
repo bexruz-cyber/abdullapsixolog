@@ -9,13 +9,12 @@ async function sendFormData() {
 
   // Prepare FormData for API
   const formData = new FormData();
-  formData.append("Ism", formDataObj.Ism);
   formData.append("Telefon raqam", formDataObj.TelefonRaqam);
   formData.append("Sana, Soat", formDataObj.SanaSoat);
 
   try {
     const response = await fetch(
-      "https://script.google.com/macros/s/AKfycbwlKi2oZEc9qgAhHhaRljD8QLNBeMkdIy4Zu-obad4cBBh3a81395rwFXv9fIinaFS2/exec",
+      "https://script.google.com/macros/s/AKfycbw-3-ST5Gsr1YqdTjdpbEJ-RWufjSkc7co-zOgmBlGYeBC6-EtAzXy_ZsWAM7aAAIvt/exec",
       {
         method: "POST",
         body: formData,
