@@ -1,1 +1,117 @@
-document.addEventListener("DOMContentLoaded",(function(){const e=document.querySelectorAll(".registerBtn"),t=document.getElementById("registrationModal"),n=document.getElementById("closeModalBtn"),l=document.querySelector(".homeModalOverlay"),o=document.getElementById("registrationForm"),i=document.getElementById("phone"),a=document.getElementById("phoneError"),d=document.getElementById("submitBtn"),c=document.getElementById("selectedCountry"),r=document.getElementById("selectedCountryCode"),s=document.getElementById("countryDropdown"),h=document.getElementById("dropdownIcon"),u=[{name:"Uzbekistan",code:"+998"},{name:"AQSH",code:"+1"},{name:"Janubiy Koreya",code:"+82"},{name:"Qirg’iziston",code:"+996"},{name:"Qozog’iston",code:"+7"},{name:"Tojikiston",code:"+992"},{name:"Turkmaniston",code:"+993"},{name:"Polsha",code:"+48"}],m={"+998":{placeholder:"88 888 88 88",format:function(e){let t="";return e.length>0&&(t+=e.slice(0,Math.min(2,e.length))),e.length>2&&(t+=" "+e.slice(2,Math.min(5,e.length))),e.length>5&&(t+=" "+e.slice(5,Math.min(7,e.length))),e.length>7&&(t+=" "+e.slice(7,Math.min(9,e.length))),t},validate:function(e){return/^\d{2} \d{3} \d{2} \d{2}$/.test(e)}},"+1":{placeholder:"555 123 4567",format:function(e){let t="";return e.length>0&&(t+=e.slice(0,Math.min(3,e.length))),e.length>3&&(t+=" "+e.slice(3,Math.min(6,e.length))),e.length>6&&(t+=" "+e.slice(6,Math.min(10,e.length))),t},validate:function(e){return/^\d{3} \d{3} \d{4}$/.test(e)}},"+82":{placeholder:"10 1234 5678",format:function(e){let t="";return e.length>0&&(t+=e.slice(0,Math.min(2,e.length))),e.length>2&&(t+=" "+e.slice(2,Math.min(6,e.length))),e.length>6&&(t+=" "+e.slice(6,Math.min(10,e.length))),t},validate:function(e){return/^\d{2} \d{4} \d{4}$/.test(e)}},"+996":{placeholder:"555 123 456",format:function(e){let t="";return e.length>0&&(t+=e.slice(0,Math.min(3,e.length))),e.length>3&&(t+=" "+e.slice(3,Math.min(6,e.length))),e.length>6&&(t+=" "+e.slice(6,Math.min(9,e.length))),t},validate:function(e){return/^\d{3} \d{3} \d{3}$/.test(e)}},"+7":{placeholder:"700 123 4567",format:function(e){let t="";return e.length>0&&(t+=e.slice(0,Math.min(3,e.length))),e.length>3&&(t+=" "+e.slice(3,Math.min(6,e.length))),e.length>6&&(t+=" "+e.slice(6,Math.min(10,e.length))),t},validate:function(e){return/^\d{3} \d{3} \d{4}$/.test(e)}},"+992":{placeholder:"55 555 5555",format:function(e){let t="";return e.length>0&&(t+=e.slice(0,Math.min(2,e.length))),e.length>2&&(t+=" "+e.slice(2,Math.min(5,e.length))),e.length>5&&(t+=" "+e.slice(5,Math.min(9,e.length))),t},validate:function(e){return/^\d{2} \d{3} \d{4}$/.test(e)}},"+993":{placeholder:"6 123 4567",format:function(e){let t="";return e.length>0&&(t+=e.slice(0,Math.min(1,e.length))),e.length>1&&(t+=" "+e.slice(1,Math.min(4,e.length))),e.length>4&&(t+=" "+e.slice(4,Math.min(8,e.length))),t},validate:function(e){return/^\d{1} \d{3} \d{4}$/.test(e)}},"+48":{placeholder:"123 456 789",format:function(e){let t="";return e.length>0&&(t+=e.slice(0,Math.min(3,e.length))),e.length>3&&(t+=" "+e.slice(3,Math.min(6,e.length))),e.length>6&&(t+=" "+e.slice(6,Math.min(9,e.length))),t},validate:function(e){return/^\d{3} \d{3} \d{3}$/.test(e)}}};let g="+998";function y(){s.innerHTML="",u.forEach((e=>{const t=document.createElement("div");t.className="country-option",e.code===g&&t.classList.add("selected"),t.innerHTML=` <span>${e.name}</span> <span class="country-code">${e.code}</span> ${e.code===g?'<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>':""} `,t.addEventListener("click",(function(){!function(e){g=e.code,r.textContent=e.code,s.style.display="none";const t=m[e.code]||m["+998"];i.placeholder=t.placeholder,i.value="",a.style.display="none",h.innerHTML='<polyline points="6 9 12 15 18 9"></polyline>'}(e)})),s.appendChild(t)}))}function p(){t.style.display="none",document.body.style.overflowY="scroll"}c.addEventListener("click",(function(){"block"===s.style.display?(s.style.display="none",h.innerHTML='<polyline points="6 9 12 15 18 9"></polyline>'):(y(),s.style.display="block",h.innerHTML='<polyline points="18 15 12 9 6 15"></polyline>')})),document.addEventListener("click",(function(e){c.contains(e.target)||s.contains(e.target)||(s.style.display="none",h.innerHTML='<polyline points="6 9 12 15 18 9"></polyline>')})),i.addEventListener("input",(function(e){const t=function(e,t){const n=e.replace(/\D/g,"");return(m[t]||m["+998"]).format(n)}(e.target.value,g);i.value=t,a.style.display="none"})),e.forEach((e=>{e.addEventListener("click",(function(){t.style.display="block",document.body.style.overflowY="hidden"}))})),n.addEventListener("click",p),l.addEventListener("click",p),o.addEventListener("submit",(function(e){if(e.preventDefault(),t=i.value,!(m[g]||m["+998"]).validate(t))return void(a.style.display="block");var t;a.style.display="none",d.textContent="YUBORILMOQDA...",d.disabled=!0;const n=new Date,l=n.toLocaleDateString("uz-UZ"),o=n.toLocaleTimeString("uz-UZ"),c={TelefonRaqam:`${g} ${i.value}`,SanaSoat:`${l} - ${o}`};localStorage.setItem("formData",JSON.stringify(c)),window.location.href="/thankYou.html",d.textContent="DAVOM ETISH",d.disabled=!1,i.value="",p()}))}));
+document.addEventListener("DOMContentLoaded", () => {
+
+    // 📌 User action event jo‘natish
+    function sendEvent(type) {
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "https://user-action-tracker.asosit.uz/events", true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState === 4) {
+                xhr.status === 200
+                    ? console.log("Yuborildi:", xhr.responseText)
+                    : console.error("Xatolik:", xhr.status);
+            }
+        };
+
+        xhr.send(JSON.stringify({
+            type,
+            site_name: "Asosiy"
+        }));
+    }
+
+    sendEvent("Saytga kirdi");
+
+    // 📌 Elements
+    const registerBtns = document.querySelectorAll(".registerBtn");
+    const modal = document.getElementById("registrationModal");
+    const closeModalBtn = document.getElementById("closeModalBtn");
+    const overlay = document.querySelector(".homeModalOverlay");
+    const form = document.getElementById("registrationForm");
+    const phone = document.getElementById("phone");
+    const phoneError = document.getElementById("phoneError");
+    const submitBtn = document.getElementById("submitBtn");
+
+    const phoneRules = {
+        "+998": {
+            placeholder: "88 888 88 88",
+            format: (value) => {
+                let v = "";
+                if (value.length > 0) v += value.slice(0, 2);
+                if (value.length > 2) v += " " + value.slice(2, 5);
+                if (value.length > 5) v += " " + value.slice(5, 7);
+                if (value.length > 7) v += " " + value.slice(7, 9);
+                return v;
+            },
+            validate: (value) => /^\d{2} \d{3} \d{2} \d{2}$/.test(value)
+        }
+    };
+
+    let currentPrefix = "+998";
+
+    // 📌 Modalni yopish
+    function closeModal() {
+        modal.style.display = "none";
+        document.body.style.overflowY = "scroll";
+    }
+
+    closeModalBtn.addEventListener("click", closeModal);
+    overlay.addEventListener("click", closeModal);
+
+    // 📌 Modalni ochish
+    registerBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            sendEvent("Tugmani bosdi");
+            modal.style.display = "flex";
+            document.body.style.overflowY = "hidden";
+        });
+    });
+
+    // 📌 Form submit
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const number = phone.value;
+
+        if (!phoneRules[currentPrefix].validate(number)) {
+            phoneError.style.display = "block";
+            return;
+        }
+
+        phoneError.style.display = "none";
+        submitBtn.textContent = "YUBORILMOQDA...";
+        submitBtn.disabled = true;
+
+        const now = new Date();
+
+        const data = {
+            TelefonRaqam: `${currentPrefix} ${number}`,
+            SanaSoat: now.toLocaleDateString("uz-UZ") + " - " + now.toLocaleTimeString("uz-UZ")
+        };
+
+        localStorage.setItem("formData", JSON.stringify(data));
+        window.location.href = "/thankYou.html";
+    });
+
+    // 📌 Phone mask
+    phone.addEventListener("input", function () {
+        const cleaned = this.value.replace(/\D/g, "");
+        this.value = phoneRules[currentPrefix].format(cleaned);
+        phoneError.style.display = "none";
+    });
+
+    // 📌 Timer (02:00 dan)
+    let time = 120;
+    const timer = document.getElementById("timer");
+
+    setInterval(() => {
+        if (time <= 0) {
+            timer.textContent = "00:00";
+            return;
+        }
+        time--;
+        const min = String(Math.floor(time / 60)).padStart(2, "0");
+        const sec = String(time % 60).padStart(2, "0");
+        timer.textContent = `${min}:${sec}`;
+    }, 1000);
+
+});
