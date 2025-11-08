@@ -7,75 +7,500 @@
   <title>Psixolog</title>
   <link rel="stylesheet" href="./css/modal.css">
   <style>
-   * { margin: 0; padding: 0; box-sizing: border-box; } body { overflow-x: hidden; font-family: sans-serif; } button { cursor: pointer; } .homeContainer { max-width: 1400px; width: 100%; margin: 0 auto; padding: 0 20px; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; } .homeTop { display: flex; align-items: flex-start; gap: 20px; max-width: 688px; width: 100%; margin-bottom: 13px; } .homeTopBox { width: 100%; padding: 12.5px 20px; background: var(--color-white-40, #FFFFFF66); border-bottom-left-radius: 16px; border-bottom-right-radius: 16px; } .homeTopBox-row { display: flex; justify-content: center; align-items: center; gap: 10px; } .homeTopTitle { font-size: 14px; line-height: 27px; font-weight: 400; text-align: center; color: rgba(0, 0, 0, 0.8); } .homeTopText { font-size: 36px; line-height: 1.3; color: #990C3D; text-align: center; } .homeTopText-blueviolet { color: #0367fd; } .descText { font-size: 24px; line-height: 1.5; margin-bottom: 7px; margin-top: 10px; } .descText>span { color: #f80000; } .homeTitle { font-size: 50px; line-height: 1; text-transform: uppercase; margin: 0 0 30px; font-family: Bebas Neue, sans-serif; width: 100%; color: #000; } .homeTitle span { color: #FF0300; } .homeText { font-weight: 500; font-size: 22px; line-height: 1.45; margin-bottom: 20px; color: #000; } .homeList { display: flex; flex-direction: column; gap: 20px; list-style: none; max-width: 620px; margin-bottom: 50px; } .homeListItem { display: flex; align-items: start; gap: 12px; font-size: 28px; line-height: 1.5; color: #2C0815; } .homeListItem>img { min-width: 20px; } .homeListItem>p>span { font-weight: 600; } .homeSignUpBtn { max-width: 637px; width: 100%; padding: 13px 25px; background: #990C3D; border-radius: 50px; border: none; font-size: 48px; line-height: 34px; text-align: center; text-transform: uppercase; color: #fff; margin-bottom: auto; display: flex; gap: 20px; align-items: center; justify-content: center; text-decoration: none; height: 111px; transition: transform 0.2s ease; } .homeSignUpBtn>p { margin-top: 15px; } .homeSignUpBtn:hover { transform: translateY(-2px); } .homeSignUpBtn:active { transform: translateY(1px); } .giftBox { display: flex; align-items: center; gap: 21px; max-width: 578px; padding: 5px 43px 5px 3px; border: 1px solid #bcbcbc; border-radius: 10px; margin-top: 20px; } .giftImg { max-width: 85px; width: 100%; object-fit: cover; } .gifyTitle { font-weight: 500; font-size: 18px; line-height: 1.8; } .gifyTitle>span { font-weight: normal; } .tabletMentor { display: none; } .mdHidden { display: none; } .home__info__main { /* background-image: url(./images/bg.avif); */ /* background-repeat: no-repeat; */ max-width: 370px; background-color: #E8DCDE; border: 1px solid #D007D4; border-bottom: 0; width: 100%; padding-left: 12px; padding-right: 12px; border-top-left-radius: 30px; border-top-right-radius: 30px; } .home__info__main-col { display: flex; align-items: center; justify-content: space-between; padding: 20px; } .home__info__main-number { font-size: 18px; line-height: 27px; font-weight: 400; text-decoration: line-through; color: #2C0815; } .home__info__main-title { color: #EB0000; font-size: 22px; line-height: 33px; } .home__info__main-text { font-size: 16px; line-height: 19px; text-align: center; span { color: #FF0300; } } @media screen and (max-width: 900px) { .home {} .homeContainer { align-items: center; } .tabletMentor { display: block; width: 51%; height: auto; } .descText { text-align: center; margin-bottom: 0; padding-top: 30px; } .mdHidden { display: flex; } .homeTopBox:nth-child(2) { display: none; } .homeTopBox { max-width: none; display: flex; align-items: center; justify-content: space-between; } .homeTopTitle { font-size: 16px; } .homeTopText { font-size: 24px; font-family: Bebas Neue, sans-serif; font-weight: 700; line-height: 36px; } .homeTitle { margin: 30px auto 60px; text-align: center; font-size: 36px; line-height: 100%; } .homeSignUpBtn { width: 100%; max-width: none; padding: 13.5px 30px; font-size: 36px; line-height: 42px; margin-bottom: 20px; } .maxMd_hidden { display: none; } .homeText { font-size: 22px; line-height: 2px; padding: 50px 0 20px; text-align: center; font-weight: 700; margin-bottom: 0; } .homeList { max-width: none; width: 100%; margin-bottom: 0; padding-bottom: 30px; } .homeListItem { font-size: 20px; line-height: 16px; } } @media (max-width: 768px) { .tabletMentor { width: 280px; margin-bottom: 0; } } @media (min-width: 480px) { .homeListItem>br { display: none; } } .calendarIcon { display: none; } @media (max-width: 480px) { .homeContainer { padding-left: 10px; padding-right: 10px; } .giftBox { margin-bottom: 18px; gap: 11px; padding-right: 11px; } .giftImg { max-width: 50px; } .gifyTitle { font-size: 13px; } .calendarIcon { min-width: 20px; display: flex; } .homeTopBox { padding: 21px 34px; box-shadow: 0px 4px 6.6px 0px #00000026; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; } .homeTopBox-row { align-items: center; gap: 10px; } .homeContainer { padding-left: 12px; padding-right: 12px; } .homeTopBox { padding-top: 4px; padding-bottom: 4px; } .homeTopTitle { font-size: 16.5px; line-height: 18px; } .homeTitle { font-size: clamp(19px, 6vw, 24px); line-height: 120%; margin-bottom: 0px; margin-top: 10px; margin-bottom: 10px; } .descText { font-size: 14px; padding-top: 10px; } .homeSignUpBtn { font-size: 27px; height: 70px; font-family: Bebas Neue, sans-serif; padding: 0; display: flex; align-items: center; justify-content: center; margin-bottom: 11px; font-weight: 700; } .homeSignUpBtn>p { margin-top: 5px; } .homeText { padding-top: 10px; font-size: 20px; line-height: 20px; padding-bottom: 12px; } .homeList { gap: 15px; } .homeListItem>img { min-width: 28px; width: 28px; height: 28px; } .homeListItem { font-size: 15px; line-height: 21px; } } .hero_text { display: none; } @media screen and (max-width: 480px) { .hero_text { display: flex; font-size: 14px; max-width: 300px; text-align: center; margin-top: 5px; margin-bottom: 5px; } } .date__timer { font-family: Kuunari, sans-serif; font-size: 28px; font-weight: 700; line-height: 28px; } .date__timer__box { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 22px; margin-bottom: 20px; padding: 8px 21px; border: 1px solid var(--color-red-46, #EB0000); background-color: white; border-radius: 335px; max-width: 127px; margin-left: auto; margin-right: auto; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      overflow-x: hidden;
+      font-family: sans-serif;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    .homeContainer {
+      max-width: 1400px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .homeTop {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      max-width: 688px;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .homeTopBox {
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+      padding: 14px 20px;
+      border-bottom-left-radius: 32px;
+      border-bottom-right-radius: 32px;
+    }
+
+    .homeTopBox-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .homeTopTitle {
+      font-size: 18px;
+      line-height: 1.3;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.8);
+    }
+
+    .homeTopText {
+      font-size: 36px;
+      line-height: 1.3;
+      text-align: center;
+    }
+
+    .homeTopText-blueviolet {
+      color: #0367fd;
+    }
+
+    .descText {
+      font-size: 24px;
+      line-height: 1.5;
+      margin-bottom: 7px;
+      margin-top: 10px;
+    }
+
+    .descText>span {
+      color: #f80000;
+    }
+
+    .homeTitle {
+      font-size: 50px;
+      line-height: 1;
+      text-transform: uppercase;
+      margin: 0 0 30px;
+      width: 100%;
+      color: #000;
+    }
+
+    .homeTitle span {
+      color: #0367fd;
+    }
+
+    .homeText {
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 1.45;
+      margin-bottom: 20px;
+      color: #000;
+    }
+
+    .homeList {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      list-style: none;
+      max-width: 620px;
+      margin-bottom: 50px;
+    }
+
+    .homeListItem {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 28px;
+      line-height: 1.5;
+      color: #000;
+    }
+
+    .homeListItem>img {
+      min-width: 32px;
+    }
+
+    .homeListItem>p>span {
+      color: #0367fd;
+    }
+
+    .homeSignUpBtn {
+      max-width: 637px;
+      width: 100%;
+      padding: 10px 25px;
+      background: #0367fd;
+      border-radius: 50px;
+      border: none;
+      font-size: 48px;
+      line-height: 34px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: auto;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      height: 111px;
+      transition: transform 0.2s ease;
+      box-shadow: 0px 4px 0px 0px #0242A1;
+    }
+
+    .homeSignUpBtn>p {
+      margin-top: 15px;
+    }
+
+    .homeSignUpBtn:hover {
+      transform: translateY(-2px);
+    }
+
+    .homeSignUpBtn:active {
+      transform: translateY(1px);
+    }
+
+    .giftBox {
+      display: flex;
+      align-items: center;
+      gap: 21px;
+      max-width: 578px;
+      padding: 5px 43px 5px 3px;
+      border: 1px solid #bcbcbc;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .giftImg {
+      max-width: 85px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .gifyTitle {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .gifyTitle>span {
+      font-weight: normal;
+    }
+
+    .tabletMentor {
+      display: none;
+    }
+
+    .mdHidden {
+      display: none;
+    }
+
+    @media screen and (max-width: 900px) {
+      .home {
+        background-image: none !important;
+      }
+
+      .homeContainer {
+        align-items: center;
+      }
+
+      .tabletMentor {
+        display: block;
+        width: 51%;
+        height: auto;
+      }
+
+      .descText {
+        text-align: center;
+        margin-bottom: 0;
+        padding-top: 30px;
+      }
+
+      .mdHidden {
+        display: flex;
+      }
+
+      .homeTopBox:nth-child(2) {
+        display: none;
+      }
+
+      .homeTopBox {
+        max-width: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .homeTopTitle {
+        font-size: 16px;
+      }
+
+      .homeTopText {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 36px;
+      }
+
+      .homeTitle {
+        margin: 30px auto 60px;
+        text-align: center;
+        font-size: 36px;
+        line-height: 100%;
+      }
+
+      .homeSignUpBtn {
+        width: 100%;
+        max-width: none;
+        padding: 13.5px 30px;
+        font-size: 36px;
+        line-height: 42px;
+        margin-bottom: 20px;
+      }
+
+      .maxMd_hidden {
+        display: none;
+      }
+
+      .homeText {
+        font-size: 22px;
+        line-height: 2px;
+        padding: 50px 0 20px;
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 0;
+      }
+
+      .homeList {
+        max-width: none;
+        width: 100%;
+        margin-bottom: 0;
+        padding-bottom: 30px;
+      }
+
+      .homeListItem {
+        font-size: 20px;
+        line-height: 16px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .tabletMentor {
+        width: 250px;
+        margin-bottom: -30px;
+      }
+    }
+
+    @media (min-width: 480px) {
+      .homeListItem>br {
+        display: none;
+      }
+    }
+
+    .calendarIcon {
+      display: none;
+    }
+
+      .homeContainer {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .giftBox {
+        margin-bottom: 18px;
+        gap: 11px;
+        padding-right: 11px;
+      }
+
+      .giftImg {
+        max-width: 50px;
+      }
+
+      .gifyTitle {
+        font-size: 13px;
+      }
+
+      .calendarIcon {
+        min-width: 20px;
+        display: flex;
+      }
+
+      .homeTopBox {
+        padding: 21px 34px;
+        box-shadow: 0px 4px 6.6px 0px #00000026;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+
+      .homeTopBox-row {
+        align-items: center;
+        gap: 10px;
+      }
+
+      .homeContainer {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+
+      .homeTopBox {
+        padding-top: 4px;
+        padding-bottom: 4px;
+      }
+
+      .homeTopTitle {
+        font-size: 16.5px;
+        line-height: 18px;
+      }
+
+      .homeTitle {
+        font-size: clamp(19px, 6vw, 24px);
+        line-height: 28px;
+        margin-bottom: 0px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      .descText {
+        font-size: 14px;
+        padding-top: 10px;
+      }
+
+      .homeSignUpBtn {
+        font-size: 20px;
+        height: 61px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 11px;
+        font-weight: 700;
+      }
+
+      .homeSignUpBtn>p {
+        margin-top: 5px;
+      }
+
+      .homeText {
+        padding-top: 10px;
+        font-size: 20px;
+        line-height: 20px;
+        padding-bottom: 12px;
+      }
+
+      .homeList {
+        gap: 15px;
+      }
+
+      .homeListItem>img {
+        min-width: 28px;
+        width: 28px;
+        height: 28px;
+      }
+
+      .homeListItem {
+        font-size: 15px;
+        line-height: 21px;
+        align-items: center;
+      }
+
+    .hero_text {
+      display: none;
+    }
+
+    @media screen and (max-width: 480px) {
+      .hero_text {
+        display: flex;
+        font-size: 14px;
+        max-width: 300px;
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+    }
+
+    .date__timer {
+      font-family: Kuunari, sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 28px;
+    }
+
+    .date__timer__box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 22px;
+      margin-bottom: 20px;
+      padding: 8px 21px;
+      border: 1px solid #0367FD;
+      border-radius: 335px;
+    }
   </style>
 </head>
 
 <body>
-    <section class="home" style="background-image: url(./images/bgSecond.avif); background-repeat: no-repeat;background-position: center; background-size: cover;" id="homePage">
-      <div class="homeContainer">
-        <div class="homeTop">
-          <div class="homeTopBox">
-            <div class="homeTopBox-row">
-              <img src="./images/calendar.svg" alt="calendar" loading="lazy" decoding="async">
-              <h2 class="homeTopTitle mb-0">12-13-14-Noyabr</h2>
-            </div>
-            <p class="homeTopText">20:30</p>
+  <section class="home" id="homePage">
+    <div class="homeContainer">
+      <div class="homeTop">
+        <div class="homeTopBox">
+          <div class="homeTopBox-row">
+            <h2 class="homeTopTitle mb-0">12-13-14-Noyabr</h2>
           </div>
-          <div class="homeTopBox maxMd_hidden">
-            <h2 class="homeTopTitle">Narxi:</h2>
-            <p class="homeTopText homeTopText-blueviolet">BEPUL</p>
-          </div>
+          <p class="homeTopText">20:30</p>
         </div>
-        <h1 class="homeTitle">
-          3 kunda sizni erkak unuta olmaydigan ayolga aylantiraman va pullarga boylikga ochilishni o‘rgataman</h1>
-        <img src="./images/Home/speaker.avif" alt="mentor" class="tabletMentor" width="549" height="638"
-          loading="lazy" />
-
-
-        <div class="home__info__main">
-          <div class="home__info__main-col">
-            <h4 class="home__info__main-number">999 000 so'm</h4>
-            <h4 class="home__info__main-title">BEPUL</h4>
-          </div>
-          <button class="registerBtn hero__registerBtn homeSignUpBtn maxMd_hidden">
-            <p>Ro‘yxatdan o‘tish</p>
-          </button>
-
-          <p class="home__info__main-text">Shoshiling! <span>Joylar soni oz qoldi.</span></p>
-          <div class="date__timer__box">
-            <img src="./images/timer.avif" loading="lazy" decoding="async" alt="timer icons">
-            <p class="date__timer">02:00</p>
-          </div>
+        <div class="homeTopBox maxMd_hidden">
+          <h2 class="homeTopTitle">Narxi:</h2>
+          <p class="homeTopText homeTopText-blueviolet">BEPUL</p>
         </div>
-
-
-
-
-        <b class="homeText">Masterklass davomida</b>
-        <ul class="homeList">
-          <li class="homeListItem">
-            <img src="./images/checkl.svg" alt="check" decoding="async" loading="lazy" />
-            <p>
-              Miyyangizni katta pullarga dasturlaymiz va daromadingizni 5x oshirasiz
-            </p>
-          </li>
-          <li class="homeListItem">
-            <img src="./images/checkl.svg" alt="check" decoding="async" loading="lazy" />
-            <p>
-              O‘zingizni sevimshi o‘rganasiz va stress bilan butunlay xayrlashasiz
-            </p>
-          </li>
-          <li class="homeListItem">
-            <img src="./images/checkl.svg" alt="check" decoding="async" loading="lazy" />
-            <p>
-              Eringizni o‘zingizga magnitdey jalb qilishni 7 sirini bilib olasiz va u endi faqat sizni deydi
-            </p>
-          </li>
-        </ul>
       </div>
-    </section>
+      <h1 class="homeTitle">
+        3 kunda sizni erkak unuta olmaydigan ayolga aylantiraman va pullarga boylikga ochilishni o‘rgataman
+      </h1>
+      <img src="./images/Home/speaker.avif" alt="mentor" class="tabletMentor" width="549" height="638" loading="lazy" />
 
+      <button class="registerBtn hero__registerBtn homeSignUpBtn maxMd_hidden">
+        <p>BEPUL QATNASHISH</p>
+      </button>
+
+      <div class="date__timer__box">
+        <img src="./images/timer.avif" loading="lazy" decoding="async" alt="timer icons">
+        <p class="date__timer">02:00</p>
+      </div>
+
+      <b class="homeText">Vebinar davomida</b>
+      <ul class="homeList">
+        <li class="homeListItem">
+          <img src="./images/check.svg" alt="check" decoding="async" loading="lazy" />
+          <p>
+            Miyyangizni katta pullarga dasturlaymiz va daromadingizni 5x oshirasiz
+          </p>
+        </li>
+        <li class="homeListItem">
+          <img src="./images/check.svg" alt="check" decoding="async" loading="lazy" />
+          <p>
+            O‘zingizni sevimshi o‘rganasiz va stress bilan butunlay xayrlashasiz
+          </p>
+        </li>
+        <li class="homeListItem">
+          <img src="./images/check.svg" alt="check" decoding="async" loading="lazy" />
+          <p>
+            Eringizni o‘zingizga magnitdey jalb qilishni 7 sirini bilib olasiz va u endi faqat sizni deydi
+          </p>
+        </li>
+      </ul>
+      <button class="registerBtn hero__registerBtn homeSignUpBtn maxMd_hidden">
+        <p>BEPUL QATNASHISH</p>
+      </button>
+    </div>
+  </section>
   <!-- Modal -->
   <div id="registrationModal" class="homeModal" style="display: none">
     <div class="homeModalOverlay"></div>
@@ -139,23 +564,25 @@
   </script>
 
   <script src="./js/app.js"></script>
-<!-- Meta Pixel Code -->
-<script defer>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1515531749791567');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1515531749791567&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+  <!-- Meta Pixel Code -->
+  <script defer>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1515531749791567');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1515531749791567&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
 </body>
 
 </html>
