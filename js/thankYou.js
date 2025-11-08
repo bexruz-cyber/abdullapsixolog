@@ -9,8 +9,9 @@ async function sendFormData() {
 
   // Prepare FormData for API
   const formData = new FormData();
+  formData.append("sheetName", "Lead");
   formData.append("Telefon raqam", formDataObj.TelefonRaqam);
-  formData.append("Sana, Soat", formDataObj.SanaSoat);
+  formData.append("Royhatdan o'tgan vaqti", formDataObj.SanaSoat);
 
   try {
     const response = await fetch(
