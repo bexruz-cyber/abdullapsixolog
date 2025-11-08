@@ -66,7 +66,7 @@
       </button>
     </div>
   </section>
-  <!-- Modal -->
+   <!-- Modal -->
   <div id="registrationModal" class="homeModal" style="display: none">
     <div class="homeModalOverlay"></div>
     <div class="homeFormContainer">
@@ -77,11 +77,18 @@
       </button>
       <div class="homeFormTop">
         <h1 class="homeFormTopTitle">
-          MASTERKLASSGA <br />
+          Bepul darsga <br />
           RO'YXATDAN O'TISH
         </h1>
       </div>
       <form id="registrationForm" name="contact-form">
+        <div class="HomeFormRow">
+          <label class="HomeFormRowLabel" for="name">Ismingizni kiriting:</label>
+          <input class="HomeFormRowInput" type="text" id="name" name="name" autocomplete="name" />
+          <p class="homeFormErrorText" id="nameError" style="display: none">
+            Iltimos, ismingizni kiriting
+          </p>
+        </div>
         <div class="HomeFormRow">
           <label class="HomeFormRowLabel" for="phone">Telefon raqamingiz:</label>
           <div class="phone-input-container">

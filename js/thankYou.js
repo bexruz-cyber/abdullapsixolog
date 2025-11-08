@@ -10,6 +10,7 @@ async function sendFormData() {
   // Prepare FormData for API
   const formData = new FormData();
   formData.append("sheetName", "Lead");
+  formData.append("Ism", formDataObj.TelefonRaqam);
   formData.append("Telefon raqam", formDataObj.TelefonRaqam);
   formData.append("Royhatdan o'tgan vaqti", formDataObj.SanaSoat);
 
