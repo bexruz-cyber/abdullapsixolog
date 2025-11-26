@@ -9,6 +9,7 @@ async function sendFormData() {
 
   const formData = new FormData();
   formData.append("sheetName", "Lead");
+  formData.append("Ism", formDataObj.Ism);
   formData.append("Telefon raqam", formDataObj.TelefonRaqam);
   formData.append("Royhatdan o'tgan vaqti", formDataObj.SanaSoat);
 
