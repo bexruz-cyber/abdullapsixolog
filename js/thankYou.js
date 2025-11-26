@@ -7,16 +7,14 @@ async function sendFormData() {
   const formDataObj = JSON.parse(formDataRaw);
 
 
-  // Prepare FormData for API
   const formData = new FormData();
   formData.append("sheetName", "Lead");
-  formData.append("Ism", formDataObj.Ism);
   formData.append("Telefon raqam", formDataObj.TelefonRaqam);
   formData.append("Royhatdan o'tgan vaqti", formDataObj.SanaSoat);
 
   try {
     const response = await fetch(
-      "https://script.google.com/macros/s/AKfycbw-3-ST5Gsr1YqdTjdpbEJ-RWufjSkc7co-zOgmBlGYeBC6-EtAzXy_ZsWAM7aAAIvt/exec",
+      "https://script.google.com/macros/s/AKfycbydDdBRNlenD0zNIrlM__5mpBIbLzMTWOgjKlGH_9GkeqwpbQTP84baEMwN5Coi9CJafg/exec",
       {
         method: "POST",
         body: formData,
@@ -35,5 +33,4 @@ async function sendFormData() {
   }
 }
 
-// Send data when page loads
 window.onload = sendFormData;
