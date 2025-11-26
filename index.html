@@ -27,7 +27,7 @@
         </div>
       </div>
       <h1 class="homeTitle">
-        3 kunda sizni erkak unutomaydigan ayolga aylantiraman va pullarga boylikga ochilishni o‘rgataman
+        3 kunda sizni erkak unutaolmaydigan ayolga aylantiraman va pullarga boylikga ochilishni o‘rgataman
       </h1>
       <img src="./images/Home/speaker.avif" alt="mentor" class="tabletMentor" width="549" height="638" loading="lazy" />
 
@@ -51,7 +51,7 @@
         <li class="homeListItem">
           <img src="./images/check.svg" alt="check" decoding="async" loading="lazy" />
           <p>
-            O‘zingizni sevimshi o‘rganasiz va stress bilan butunlay xayrlashasiz
+            O‘zingizni sevishni o‘rganasiz va stress bilan butunlay xayrlashasiz
           </p>
         </li>
         <li class="homeListItem">
@@ -81,6 +81,22 @@
           RO'YXATDAN O'TISH
         </h1>
       </div>
+      <form id="registrationForm" name="contact-form">
+        <!-- Ism inputi -->
+        <div class="HomeFormRow">
+          <label class="HomeFormRowLabel" for="name">Ismingiz:</label>
+          <input
+            class="HomeFormRowInput"
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Ismingizni kiriting"
+            autocomplete="name"
+          />
+          <p class="homeFormErrorText" id="nameError" style="display: none">
+            ❌ Ismni to‘g‘ri kiriting!
+          </p>
+        </div>
       <form id="registrationForm" name="contact-form">
         <div class="HomeFormRow">
           <label class="HomeFormRowLabel" for="phone">Telefon raqamingiz:</label>
