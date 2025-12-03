@@ -253,7 +253,7 @@
       .homeTitle {
         margin: 30px auto 60px;
         text-align: center;
-        font-size: 36px;
+        font-size: 30px;
         line-height: 100%;
       }
 
@@ -362,11 +362,15 @@
       }
 
       .homeTitle {
-        font-size: clamp(19px, 6vw, 24px);
+        font-size: clamp(14px, 6vw, 16px);
         line-height: 28px;
         margin-bottom: 0px;
         margin-top: 10px;
+        max-width: 318px;
         margin-bottom: 10px;
+      }
+      .homeTitle span {
+        font-size: 17px;
       }
 
       .descText {
@@ -417,6 +421,16 @@
       display: none;
     }
 
+
+    @media (max-width:340px) {
+      .homeTitle {
+        font-size: 13px;
+        line-height: 150%;
+      }
+      .homeTitle span {
+        font-size: 15px;
+      }
+    }
     @media screen and (max-width: 480px) {
       .hero_text {
         display: flex;
@@ -461,18 +475,15 @@
             <h2 class="homeTopTitle mb-0"> 4-5-6-Dekabr </h2>
           </div>
           <p class="homeTopText">20:30</p>
-        </div>
+        </div> 
         <div class="homeTopBox maxMd_hidden">
           <h2 class="homeTopTitle">Narxi:</h2>
           <p class="homeTopText homeTopText-blueviolet">BEPUL</p>
         </div>
       </div>
       <h1 class="homeTitle">
-        3 KUNDA SIZNI ERKAK
-        UNUTAOLMAYDIGAN AYOLGA
-        AYLANTIRAMAN VA PULLARGA
-        BOYLIKGA OCHILISHNI
-        O‘RGATAMAN
+        Duo qilasiz, harakat qilasiz… lekin hayotingiz o‘zgarmayaptimi?  <br>
+        <span>3 kunlik darsimda sizga shunday yechimlar beraman — natijadan o’zingiz hayron qolasiz</span>
       </h1>
       <img src="./images/Home/speaker.avif" alt="mentor" class="tabletMentor" width="549" height="638" loading="lazy" />
 
